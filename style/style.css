@@ -486,6 +486,9 @@ header {
 .customer-list.flex {
   position: relative;
   column-gap: 50px;
+
+  display: flex;
+  flex-direction: row;
   transition: transform 0.3s ease;
 }
 
@@ -499,6 +502,7 @@ header {
   background-color: #fff;
   border-radius: 10px;
   transition: border 0.3s ease;
+  opacity: 0.5;
 }
 
 .customer-item.flex:hover {
@@ -506,6 +510,11 @@ header {
 }
 
 .active-slide {
+
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
   border: 2px solid var(--btn-color);
 }
 
