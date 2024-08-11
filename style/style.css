@@ -116,6 +116,92 @@ header {
   color: var(--brand-color);
 }
 
+/*  =========================MODAL=========================  */
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal.block {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 100px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(213, 216, 216, 0.5);
+}
+
+.modal-info {
+  max-width: 400px;
+  width: 100%;
+  margin: 3% auto;
+  padding: 20px;
+  border: 1px solid var(--second-color);
+  background-color: rgba(213, 216, 216, 0.6);
+  border-radius: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form.flex {
+  width: 100%;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.label {
+  width: 100%;
+  font-size: 20px;
+  line-height: 187%;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  font-size: 20px;
+  line-height: 187%;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 15px;
+  border: none;
+  outline: #aaa;
+  background-color: #fff;
+}
+
+.btn-red-modal {
+  width: 250px;
+  height: 60px;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: var(--btn-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-red-modal:hover {
+  background-color: var(--brand-color);
+}
+
 /* =======================MAIN====================== */
 
 .hero {
@@ -151,21 +237,17 @@ header {
 .btn-red {
   width: 250px;
   height: 60px;
+  color: #fff;
   border-radius: 10px;
   border: none;
+  outline: none;
   background: var(--btn-color);
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.btn-red:hover{
-  color: #fff;
-  background: var(--brand-color);
-}
-
-.btn-red:hover + .btn-filter {
-  color: #fff;
-  background: var(--brand-color);
+.btn-red:hover {
+  background-color: var(--brand-color);
 }
 
 .btn-filter {
@@ -504,7 +586,6 @@ header {
 }
 
 .customer-item {
-  
   min-width: 400px;
   height: 230px;
   flex-direction: column;
@@ -522,7 +603,7 @@ header {
 
 .active-slide {
   border: 2px solid var(--btn-color);
-} 
+}
 
 .customer-item-red {
   display: none;
@@ -577,7 +658,6 @@ header {
   border: none;
   cursor: pointer;
 }
-
 
 /* ==============================FEATURES================= */
 

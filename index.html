@@ -44,7 +44,7 @@
               <li><a class="nav-link rubik-regular" href="#">Help</a></li>
             </ul>
             <div>
-              <button class="rubik-medium btn-border" type="submit">
+              <button  class="sign rubik-medium btn-border" type="submit">
                 Sign In
               </button>
               <button class="rubik-medium btn-border" type="button">
@@ -52,6 +52,33 @@
               </button>
             </div>
           </nav>
+          <!-- =========================MODAL========================= -->
+          <div class="modal">
+            <div class="modal-info">
+              <span class="close rubik-bold">&times;</span>
+              <form action="" id="registrationForm" class="form flex rubik-medium">
+                <label for="firstName" class="label"
+                  >Name <br />
+                  <input type="text" id="firstName" name="firstName" class="input" required />
+                </label>
+                <label for="lastName" class="label"
+                  >LastName <br />
+                  <input type="text" id="lastName" name="lastName" class="input" required />
+                </label>
+                <label for="email" class="label"
+                  >Email <br />
+                  <input type="email" id="email" name="email" class="input" required />
+                </label>
+                <label for="phone" class="label"
+                  >Tel <br />
+                  <input type="tel"  id="phone" name="phone" class="input" required />
+                </label>
+                <button type="submit" class="btn-red-modal rubik-bold">
+                  Registration
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </header>
@@ -613,6 +640,7 @@
         </div>
       </section>
     </footer>
+    <script src="./modal.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
