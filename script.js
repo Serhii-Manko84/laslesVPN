@@ -1,49 +1,57 @@
 const slides = document.querySelectorAll(".customer-item");
-const controlls = document.querySelectorAll(".controlls");
+const sliderLine = document.querySelector(".customer-list");
+const prevSlide = document.getElementById("prev");
+const nextSlide = document.getElementById("next");
 
-console.log("Controls:", controlls);
+let currentSlideIndex = 0;
 
-console.log("Slides:", slides);
+let sliderWidth = slides[0].offsetWidth;
+const widthMarg = 400;
 
-let currentIndex = 0;
+function updateSliderWidth() {
+  sliderWidth = slides[0].offsetWidth;
+  sliderLine.style.width = `${slides.length * sliderWidth + widthMarg}px`;
+}
 
-function showSlide(index) {
-    const slideWidth = slides[0].offsetWidth; // Ширина одного слайда
-    const offset = -index * slideWidth;
-    document.querySelector('.customer-list').style.transform = `translateX(${offset}px)`;
-    currentIndex = index;
+function removeClassSlide() {
+  slides.forEach((slide) => slide.classList.remove("active-slide"));
+}
+
+function rollSlide() {
+  sliderLine.style.transform = `translateX(${
+    -currentSlideIndex * sliderWidth
+  }px)`;
+  slides[currentSlideIndex].classList.add("active-slide");
+}
+
+function nextShowSlide() {
+  removeClassSlide();
+  currentSlideIndex++;
+  if (currentSlideIndex >= slides.length) {
+    currentSlideIndex = 0;
+  }
+  rollSlide();
+}
+
+function prevShowSlide() {
+  removeClassSlide();
+  currentSlideIndex--;
+  if (currentSlideIndex < 0) {
+    currentSlideIndex = slides.length - 1;
   }
 
-// function showSlide(index) {
-//   console.log(`Showing slide ${index}`);
-//   if (slides[currentIndex]) {
-//     slides[currentIndex].classList.remove("active-slide");
-//   }
-//   if (slides[index]) {
-//     slides[index].classList.add("active-slide");
-//   }
-//   currentIndex = index;
-// }
+  rollSlide();
+}
 
-controlls.forEach((control) => {
-  control.addEventListener("click", (event) => {
-    const target = event.currentTarget;
-    console.log("Clicked button:", target);
+// Ініціалізація ширини та початкової позиції слайдера
+updateSliderWidth();
+rollSlide();
 
-    if (target.classList.contains("prev")) {
-      let index = currentIndex - 1;
-      if (index < 0) {
-        index = slides.length - 1;
-      }
-      showSlide(index);
-    } else if (target.classList.contains("next")) {
-      let index = currentIndex + 1;
-      if (index >= slides.length) {
-        index = 0;
-      }
-      showSlide(index);
-    }
-  });
+// Оновлюємо ширину слайдера при зміні розміру вікна
+window.addEventListener("resize", () => {
+  updateSliderWidth();
+  rollSlide(); // Перераховуємо позицію слайдера після зміни розміру вікна
 });
 
-showSlide(currentIndex);
+nextSlide.addEventListener("click", nextShowSlide);
+prevSlide.addEventListener("click", prevShowSlide);

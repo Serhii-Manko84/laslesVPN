@@ -155,12 +155,23 @@ header {
   border: none;
   background: var(--btn-color);
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-red:hover{
+  color: #fff;
+  background: var(--brand-color);
+}
+
+.btn-red:hover + .btn-filter {
+  color: #fff;
+  background: var(--brand-color);
 }
 
 .btn-filter {
   position: absolute;
   transform: translate(10%, 40%);
-
+  color: #fff;
   width: 211px;
   height: 60px;
   border-radius: 10px;
@@ -238,7 +249,7 @@ header {
   color: var(--second-color);
 }
 
-/* ======================FEATURES============== */
+/* ==========================FEATURES================= */
 
 .features {
   margin-bottom: 131px;
@@ -479,20 +490,21 @@ header {
 }
 
 .slider-wrapper {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
 }
 
 .customer-list.flex {
   position: relative;
   column-gap: 50px;
-
   display: flex;
   flex-direction: row;
+  transform: translateX(0);
   transition: transform 0.3s ease;
 }
 
-.customer-item.flex {
+.customer-item {
+  
   min-width: 400px;
   height: 230px;
   flex-direction: column;
@@ -502,7 +514,6 @@ header {
   background-color: #fff;
   border-radius: 10px;
   transition: border 0.3s ease;
-  opacity: 0.5;
 }
 
 .customer-item.flex:hover {
@@ -510,13 +521,8 @@ header {
 }
 
 .active-slide {
-
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-
   border: 2px solid var(--btn-color);
-}
+} 
 
 .customer-item-red {
   display: none;
@@ -527,7 +533,6 @@ header {
   height: 300px;
   filter: blur(114px);
   background: #0d1025;
-  opacity: 0.06;
   border: 2px solid #0d1025;
 }
 
@@ -572,6 +577,7 @@ header {
   border: none;
   cursor: pointer;
 }
+
 
 /* ==============================FEATURES================= */
 
