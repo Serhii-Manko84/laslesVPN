@@ -44,7 +44,7 @@
               <li><a class="nav-link rubik-regular" href="#">Help</a></li>
             </ul>
             <div>
-              <button  class="sign rubik-medium btn-border" type="submit">
+              <button class="sign rubik-medium btn-border" type="submit">
                 Sign In
               </button>
               <button class="rubik-medium btn-border" type="button">
@@ -56,22 +56,61 @@
           <div class="modal">
             <div class="modal-info">
               <span class="close rubik-bold">&times;</span>
-              <form action="" id="registrationForm" class="form flex rubik-medium">
+              <form
+                action="telegram"
+                method="get"
+                id="registrationForm"
+                class="form flex rubik-medium"
+              >
                 <label for="firstName" class="label"
                   >Name <br />
-                  <input type="text" id="firstName" name="firstName" class="input" required />
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    class="input"
+                    placeholder="Ваше Ім'я"
+                    title="Введіть Ваше Ім'я"
+                    required
+                  />
                 </label>
                 <label for="lastName" class="label"
                   >LastName <br />
-                  <input type="text" id="lastName" name="lastName" class="input" required />
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    class="input"
+                    placeholder="Ваше Прізвище"
+                    title="Введіть Ваше Прізвище"
+                    required
+                  />
                 </label>
                 <label for="email" class="label"
                   >Email <br />
-                  <input type="email" id="email" name="email" class="input" required />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="input"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Введіть коректну електронну адресу"
+                    placeholder="Ваш email - qazwsx@gmail.com"
+                    required
+                  />
                 </label>
                 <label for="phone" class="label"
                   >Tel <br />
-                  <input type="tel"  id="phone" name="phone" class="input" required />
+                  <input
+                    type='tel'
+                    id="phone"
+                    name="phone"
+                    class="input"
+                    placeholder="0675824512"
+                    pattern="\d{10}"
+                    title="Введіть номер телефону у форматі 067-582-45-12 або +38067-582-45-12"
+                    required
+                  />
                 </label>
                 <button type="submit" class="btn-red-modal rubik-bold">
                   Registration
