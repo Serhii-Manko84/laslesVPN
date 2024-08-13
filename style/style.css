@@ -215,10 +215,10 @@ h2 {
   /* =======================MAIN====================== */
 
   .hero {
-    margin-bottom: 103px;
+    margin-bottom: 55px;
   }
 
-  .hero.flex {
+  .blok.flex {
     flex-direction: column;
     text-align: center;
     position: relative;
@@ -275,14 +275,13 @@ h2 {
 
   .hero-img {
     width: 70%;
-    position: absolute;
-    transform: translate(-52%, -38%);
+    position: relative;
+    transform: translate(-3%, 27%);
   }
 
   /* ======================INFO====================== */
 
   .info {
-    margin-top: 260px;
     margin-bottom: 30px;
   }
 
@@ -292,7 +291,7 @@ h2 {
 
   .filter {
     display: none;
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 0;
 
@@ -937,12 +936,10 @@ h2 {
   }
 
   /* =======================MAIN====================== */
-
   .hero {
-    margin-bottom: 103px;
+    margin-bottom: 20px;
   }
-
-  .hero.flex {
+  .blok.flex {
     flex-direction: column;
     text-align: center;
     position: relative;
@@ -969,8 +966,8 @@ h2 {
   }
 
   .btn-red {
-    width: 120px;
-    height: 30px;
+    width: 140px;
+    height: 50px;
     color: #fff;
     border-radius: 10px;
     border: none;
@@ -1000,14 +997,13 @@ h2 {
 
   .hero-img {
     width: 70%;
-    position: absolute;
-    transform: translate(-52%, -38%);
+    position: relative;
+    transform: translate(0%, -4%);
   }
 
   /* ======================INFO====================== */
 
   .info {
-    margin-top: 260px;
     margin-bottom: 30px;
   }
 
@@ -1015,25 +1011,7 @@ h2 {
     position: relative;
   }
 
-  .filter {
-    display: none;
-    position: absolute;
-    top: 20%;
-    left: 0;
-
-    border-radius: 10px;
-    width: 1068px;
-    height: 189px;
-
-    filter: blur(114px);
-    background: rgb(13, 16, 37);
-    opacity: 0.06;
-    z-index: 1;
-    border: 2px solid black;
-  }
-
   .info-list.flex {
-    padding-top: 70px;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
@@ -1526,8 +1504,308 @@ h2 {
     margin: 0 auto;
   }
 
+  /* ==============================HEADER=============================== */
 
-  
+  header {
+    margin-bottom: 40px;
+  }
+
+  .nav-list.flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*  =========================MODAL=========================  */
+
+  .modal-info {
+    margin: 50px 220px;
+  }
+
+  /* ===========================MAIN========================= */
+
+  .hero {
+    margin-bottom: 20px;
+    height: 300px;
+  }
+
+  .blok.flex {
+    flex-direction: column;
+    position: relative;
+    max-width: 300px;
+  }
+
+  .hero-img {
+    width: 60%;
+    position: relative;
+    transform: translate(32%, -111%);
+  }
+
+  /* ===========================INFO============================ */
+
+  .info {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  .info-list.flex {
+    flex-direction: row;
+    padding-top: 0px;
+  }
+
+  .info-item.flex:nth-child(1) {
+    padding-bottom: 0px;
+  }
+
+  .info-item.flex:nth-child(2) {
+    border-top: none;
+    border-bottom: none;
+    border-left: 2px solid rgb(13, 16, 37, 0.06);
+    border-right: 2px solid rgb(13, 16, 37, 0.06);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .info-item.flex:last-child {
+    padding-top: 0px;
+    padding-left: 50px;
+  }
+
+  /* ===========================FEATURES=====================================*/
+
+  .features .container.flex {
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  .features-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  .features h2 {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+
+  .features p {
+    font-size: 14px;
+    line-height: 147%;
+    color: var(--second-color);
+    width: 100%;
+  }
+
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .features-item {
+    padding-left: 44px;
+  }
+
+  .features-item::before {
+    left: 0;
+  }
+
+  /* ===========================PLAN============================== */
+
+  .plan h2 {
+    font-size: 22px;
+    line-height: 167%;
+    font-weight: 700;
+    margin: 20px;
+  }
+
+  .plan p {
+    font-size: 16px;
+    line-height: 147%;
+    margin: 20px;
+  }
+
+  .plan-list {
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: stretch;
+  }
+
+  .plan-item.flex {
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .plan-item.flex h3 {
+    font-size: 14px;
+    line-height: 147%;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+  }
+
+  .plan-items-item {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: 124%;
+  }
+
+  .button-red {
+    font-size: 16px;
+    width: 120px;
+    height: 25px;
+  }
+
+  .button-red:hover {
+    background-color: var(--btn-color);
+    color: #fff;
+  }
+
+  /* ===================================NETWORK====================================== */
+
+  .network {
+    padding-bottom: 0px;
+    padding-bottom: 40px;
+  }
+
+  .network h2 {
+    font-size: 22px;
+    line-height: 187%;
+  }
+
+  .network p {
+    font-size: 16px;
+    line-height: 167%;
+    margin: 0 0 40px 0;
+  }
+
+  .network svg {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+
+  .network-list.flex {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  /* ===================================CUSTOMER====================================== */
+
+  .customer .container > h2 {
+    font-size: 22px;
+    line-height: 147%;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .customer .container > p {
+    font-size: 16px;
+    line-height: 167%;
+    margin-bottom: 20px;
+  }
+
+  .customer-list.flex {
+    position: relative;
+    column-gap: 30px;
+  }
+
+  .customer-item {
+    max-width: 550px;
+    justify-content: flex-start;
+  }
+
+  .customer-item.flex p {
+    font-size: 14px;
+    line-height: 147%;
+  }
+
+  .customer-change-slayder.flex {
+    position: absolute;
+    right: 41%;
+    column-gap: 40px;
+  }
+
+  /* ===================================SUBSCRIBE====================================== */
+
+  .subscribe {
+    margin-bottom: 20px;
+  }
+
+  .subscribe .container.flex {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    column-gap: 80px;
+  }
+
+  .subscribe-wrapper h2 {
+    font-size: 22px;
+    line-height: 147%;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .subscribe-wrapper p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .subscribe .rubik-bold.btn-red {
+    width: 140px;
+    height: 50px;
+    line-height: 147%;
+    font-size: 14px;
+  }
+
+  /* ==============================FOOTER================================ */
+
+  .informations .container.flex {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .footer-wrapper {
+    order: 1;
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .footer-wrapper p {
+    font-size: 14px;
+  }
+
+  .informations-aside.flex {
+    order: 2;
+    column-gap: 30px;
+    align-items: flex-start;
+  }
+  .informations-aside-wrap strong {
+    font-size: 16px;
+}
+
+.informations-aside-wrap{
+  text-align: left;
+}
+
+.informations-aside-wrap ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+
+
 }
 
 /* ================================1200px================== */
