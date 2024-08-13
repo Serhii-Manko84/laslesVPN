@@ -22,7 +22,7 @@ function rollSlide() {
     -currentSlideIndex * sliderWidth
   }px)`;
   slides[currentSlideIndex].classList.add("active-slide");
-}
+  }
 
 function nextShowSlide() {
   removeClassSlide();
