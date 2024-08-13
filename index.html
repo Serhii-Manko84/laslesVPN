@@ -69,6 +69,7 @@
                     id="firstName"
                     name="firstName"
                     class="input"
+                    pattern="[a-zA-Zа-яА-ЯіІїЇ]+"
                     placeholder="Ваше Ім'я"
                     title="Введіть Ваше Ім'я"
                     required
@@ -81,6 +82,7 @@
                     id="lastName"
                     name="lastName"
                     class="input"
+                    pattern="[a-zA-Zа-яА-ЯіІїЇ]+"
                     placeholder="Ваше Прізвище"
                     title="Введіть Ваше Прізвище"
                     required
@@ -93,7 +95,6 @@
                     id="email"
                     name="email"
                     class="input"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     title="Введіть коректну електронну адресу"
                     placeholder="Ваш email - qazwsx@gmail.com"
                     required
@@ -102,7 +103,7 @@
                 <label for="phone" class="label"
                   >Tel <br />
                   <input
-                    type='tel'
+                    type="tel"
                     id="phone"
                     name="phone"
                     class="input"
@@ -224,8 +225,7 @@
           <h2>Choose Your Plan</h2>
           <p class="rubik-regular">
             Let's choose the package that is best for you and explore it happily
-            and <br />
-            cheerfully.
+            and cheerfully.
           </p>
           <ul class="plan-list flex">
             <li class="plan-item flex">
@@ -307,10 +307,7 @@
 
       <section class="network">
         <div class="container">
-          <h2>
-            Huge Global Network <br />
-            of Fast VPN
-          </h2>
+          <h2>Huge Global Network of Fast VPN</h2>
           <p class="rubik-regular">
             See <span class="rubik-medium">LaslesVPN</span> everywhere to make
             it easier for you when you move <br />
