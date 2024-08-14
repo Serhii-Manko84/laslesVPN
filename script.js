@@ -6,7 +6,7 @@ const nextSlide = document.getElementById("next");
 let currentSlideIndex = 0;
 
 let sliderWidth = slides[0].offsetWidth;
-const widthMarg = 400;
+const widthMarg = 430;
 
 function updateSliderWidth() {
   sliderWidth = slides[0].offsetWidth;
