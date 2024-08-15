@@ -6,7 +6,7 @@ const nextSlide = document.getElementById("next");
 let currentSlideIndex = 0;
 
 let sliderWidth = slides[0].offsetWidth;
-const widthMarg = 430;
+const widthMarg = 400;
 
 function updateSliderWidth() {
   sliderWidth = slides[0].offsetWidth;
@@ -18,11 +18,11 @@ function removeClassSlide() {
 }
 
 function rollSlide() {
-  sliderLine.style.transform = `translateX(${
-    -currentSlideIndex * sliderWidth
-  }px)`;
+  const maxOffset = sliderLine.scrollWidth - sliderWidth; 
+  const offset = Math.min(currentSlideIndex * sliderWidth, maxOffset);
+  sliderLine.style.transform = `translateX(-${offset}px)`;
   slides[currentSlideIndex].classList.add("active-slide");
-  }
+}
 
 function nextShowSlide() {
   removeClassSlide();
